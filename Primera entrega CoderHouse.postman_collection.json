@@ -1,0 +1,246 @@
+{
+	"info": {
+		"_postman_id": "967704af-d0a4-4f75-a32b-e850593410a3",
+		"name": "Primera entrega CoderHouse",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21048162"
+	},
+	"item": [
+		{
+			"name": "AddCart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"timestamp\": \"4/11/2022\",\r\n    \"products\": [\r\n        {\r\n            \"id\":1,\r\n            \"timestamp\":\"2021-09-01T00:00:00.000Z\",\r\n            \"nombre\":\"Escuadra\",\r\n            \"descripcion\":\"Calculo de areas\",\r\n            \"codigo\":\"1234\",\r\n            \"foto\":\"https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png\",\r\n            \"precio\":123.45,\r\n            \"stock\":10\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/carrito",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"carrito"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCart",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/carrito/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"carrito",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProductsInCart",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/carrito/1/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"carrito",
+						"1",
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddProductsToCart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":2,\r\n    \"timestamp\":\"2021-09-01T00:00:00.000Z\",\r\n    \"nombre\":\"Escuadra\",\r\n    \"descripcion\":\"Calculo de areas\",\r\n    \"codigo\":\"1234\",\r\n    \"foto\":\"https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png\",\r\n    \"precio\":123.45,\r\n    \"stock\":10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/carrito/1/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"carrito",
+						"1",
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProductFromCart",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/carrito/1/productos/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"carrito",
+						"1",
+						"productos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://malleable-cut-healer.glitch.me/api/productos",
+					"protocol": "https",
+					"host": [
+						"malleable-cut-healer",
+						"glitch",
+						"me"
+					],
+					"path": [
+						"api",
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Calculadora II\",\r\n    \"descripcion\": \"Calculo de areas\",\r\n    \"codigo\": \"1234\",\r\n    \"foto\": \"https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png\",\r\n    \"precio\": 234.56,\r\n    \"stock\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProduct",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"timestamp\": \"2021-09-01T00:00:00.000Z\",\r\n    \"nombre\": \"Calculadora II\",\r\n    \"descripcion\": \"Calculo de areas\",\r\n    \"codigo\": \"1234\",\r\n    \"foto\": \"https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png\",\r\n    \"precio\": 234.56,\r\n    \"stock\": 20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/productos/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"productos",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProduct",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/productos/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"productos",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
